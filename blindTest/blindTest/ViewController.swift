@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Déclaration des objets
+    @IBOutlet weak var titrelbl: UILabel!
+    @IBOutlet weak var musicbtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Style du boutton
+        musicbtn.layer.cornerRadius = 3.0
     }
 
 
