@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //Style du boutton
-        musicbtn.layer.cornerRadius = 3.0
+        musicbtn.layer.cornerRadius = 5.0
+        musicbtn.layer.
     }
 
 
