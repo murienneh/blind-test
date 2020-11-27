@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnMusic: UIButton!
     @IBOutlet weak var btnGenerique: UIButton!
     @IBOutlet weak var btnPublicite: UIButton!
+    @IBOutlet weak var btnParams: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueViewController") as! MusiqueViewController
         self.navigationController?.pushViewController(musicViewController, animated: true)
+    }
+    
+    @IBAction func clicParamsAction(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let paramsViewController = storyboard.instantiateViewController(withIdentifier: "ParamsViewController") as! ParamsViewController
+        self.navigationController?.pushViewController(paramsViewController, animated: true)
     }
 
 
