@@ -39,19 +39,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps de réponse :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2q-WA-MwC">
+                                <rect key="frame" x="10" y="180" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" value="45" minValue="30" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="bYY-lL-4j8">
+                                <rect key="frame" x="8" y="221" width="263" height="31"/>
+                                <connections>
+                                    <action selector="setValue" destination="UkU-Gs-nsl" eventType="valueChanged" id="9wY-ft-aag"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valeur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-K3-N7m">
+                                <rect key="frame" x="345" y="271" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JKR-BZ-kEw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="bYY-lL-4j8" secondAttribute="trailing" constant="145" id="Flt-UO-Vhx"/>
+                            <constraint firstItem="bYY-lL-4j8" firstAttribute="top" secondItem="I2q-WA-MwC" secondAttribute="bottom" constant="20" id="IhV-SX-ydK"/>
+                            <constraint firstItem="bYY-lL-4j8" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="NKk-Jh-Cm8"/>
                             <constraint firstItem="bRL-fp-HaM" firstAttribute="top" secondItem="JKR-BZ-kEw" secondAttribute="top" constant="20" id="Ol8-hH-M9G"/>
+                            <constraint firstItem="Exr-K3-N7m" firstAttribute="top" secondItem="bYY-lL-4j8" secondAttribute="bottom" constant="20" id="XrT-H6-f6J"/>
+                            <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="I2q-WA-MwC" secondAttribute="trailing" constant="10" id="ZuS-6L-VNC"/>
+                            <constraint firstItem="I2q-WA-MwC" firstAttribute="top" secondItem="bRL-fp-HaM" secondAttribute="bottom" constant="80" id="aEP-bp-aom"/>
                             <constraint firstItem="bRL-fp-HaM" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="exp-dK-R7l"/>
                             <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="bRL-fp-HaM" secondAttribute="trailing" constant="10" id="o4C-YC-PSY"/>
+                            <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="Exr-K3-N7m" secondAttribute="trailing" constant="20" id="o7Q-dG-jdp"/>
+                            <constraint firstItem="I2q-WA-MwC" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="tj3-N2-4Oa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monSlider" destination="bYY-lL-4j8" id="O3D-YG-1Lj"/>
+                        <outlet property="valeur" destination="Exr-K3-N7m" id="dxK-AG-P8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xx-2L-S7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-942" y="-510"/>
+            <point key="canvasLocation" x="-942.02898550724649" y="-510.26785714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -104,9 +134,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-cW-RyK">
-                                <rect key="frame" x="382" y="154" width="22" height="22"/>
+                                <rect key="frame" x="367" y="98" width="37" height="36"/>
                                 <state key="normal" image="gear" catalog="system">
                                     <attributedString key="attributedTitle"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
                                 </state>
                                 <connections>
                                     <action selector="clicParamsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU9-rl-nPt"/>
@@ -122,12 +153,12 @@
                             <constraint firstItem="tYa-e9-mBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RfT-N3-C3I"/>
                             <constraint firstItem="lzW-Zt-PS5" firstAttribute="top" secondItem="kbc-vw-lpM" secondAttribute="bottom" constant="250" id="S9C-kv-bTP"/>
                             <constraint firstItem="8Gb-zP-Bg9" firstAttribute="top" secondItem="tYa-e9-mBD" secondAttribute="bottom" constant="20" id="URd-7F-bqz"/>
+                            <constraint firstItem="dnJ-cW-RyK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="VER-2E-R6B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-cW-RyK" secondAttribute="trailing" constant="10" id="WJE-zt-R2T"/>
                             <constraint firstItem="tYa-e9-mBD" firstAttribute="top" secondItem="lzW-Zt-PS5" secondAttribute="bottom" constant="20" id="ZuT-AE-Q0v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lzW-Zt-PS5" secondAttribute="trailing" constant="10" id="afE-MZ-xo0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Gb-zP-Bg9" secondAttribute="trailing" constant="10" id="ffT-jT-mQj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYa-e9-mBD" secondAttribute="trailing" constant="10" id="hJk-mb-mXx"/>
-                            <constraint firstItem="dnJ-cW-RyK" firstAttribute="top" secondItem="kbc-vw-lpM" secondAttribute="bottom" constant="10" id="t0V-Na-liM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-cW-RyK" secondAttribute="trailing" constant="10" id="v4d-xl-q4f"/>
                             <constraint firstItem="kbc-vw-lpM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vHT-lk-ozX"/>
                             <constraint firstItem="8Gb-zP-Bg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zpP-Np-qGL"/>
                         </constraints>
@@ -143,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-941" y="153"/>
+            <point key="canvasLocation" x="-942.02898550724649" y="152.67857142857142"/>
         </scene>
         <!--Musique View Controller-->
         <scene sceneID="sVP-56-7bE">
