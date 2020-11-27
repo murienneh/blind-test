@@ -171,32 +171,53 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-Q5-dYE">
-                                <rect key="frame" x="10" y="564.5" width="394" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InK-Gu-u0A">
+                                <rect key="frame" x="157" y="565" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3fx-Vg-zRP"/>
+                                    <constraint firstAttribute="width" constant="100" id="4cY-dh-g7i"/>
+                                    <constraint firstAttribute="height" constant="100" id="cBs-Ks-mdc"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" image="play_alt-512">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicPlay" destination="1xf-x1-bx9" eventType="touchUpInside" id="AnL-Kg-cXl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Fw-Mig">
+                                <rect key="frame" x="186" y="699" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fxR-7s-6Fw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sa7-Fw-Mig" firstAttribute="top" secondItem="InK-Gu-u0A" secondAttribute="bottom" constant="34" id="0is-iW-JOE"/>
+                            <constraint firstItem="sa7-Fw-Mig" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="186" id="AnI-V2-82U"/>
+                            <constraint firstItem="InK-Gu-u0A" firstAttribute="top" secondItem="G3P-Yi-uVA" secondAttribute="bottom" constant="47" id="HGd-B7-Hye"/>
                             <constraint firstItem="IWO-ap-q5F" firstAttribute="top" secondItem="fxR-7s-6Fw" secondAttribute="top" constant="20" id="PAM-oC-AH2"/>
                             <constraint firstItem="Tm8-V5-QF3" firstAttribute="top" secondItem="IWO-ap-q5F" secondAttribute="bottom" constant="50" id="Tgu-UT-jSL"/>
-                            <constraint firstItem="bAg-Q5-dYE" firstAttribute="top" secondItem="G3P-Yi-uVA" secondAttribute="bottom" constant="46" id="Vev-Wy-G20"/>
                             <constraint firstItem="IWO-ap-q5F" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="h8T-DB-MSZ"/>
                             <constraint firstItem="G3P-Yi-uVA" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="iuC-FM-IBw"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="G3P-Yi-uVA" secondAttribute="trailing" constant="10" id="jSV-S0-FPy"/>
                             <constraint firstItem="Tm8-V5-QF3" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="jeB-CN-sLC"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="Tm8-V5-QF3" secondAttribute="trailing" constant="10" id="mHt-CO-yHP"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="InK-Gu-u0A" secondAttribute="trailing" constant="157" id="nQ2-JR-9d6"/>
+                            <constraint firstItem="InK-Gu-u0A" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="157" id="ozl-66-KQ1"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="IWO-ap-q5F" secondAttribute="trailing" constant="10" id="pAd-wo-8lu"/>
-                            <constraint firstItem="bAg-Q5-dYE" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="qnM-JE-EfT"/>
-                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="bAg-Q5-dYE" secondAttribute="trailing" constant="10" id="qxN-S5-dTk"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="sa7-Fw-Mig" secondAttribute="trailing" constant="186" id="vMw-zh-mae"/>
                             <constraint firstItem="G3P-Yi-uVA" firstAttribute="top" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="82" id="wBM-Ij-o1U"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnPlayMusic" destination="InK-Gu-u0A" id="Bi2-q8-6oE"/>
                         <outlet property="imgView" destination="Tm8-V5-QF3" id="sxY-kO-3GJ"/>
+                        <outlet property="lblDecompte" destination="sa7-Fw-Mig" id="O1A-df-UbT"/>
+                        <outlet property="lblPretMusic" destination="G3P-Yi-uVA" id="2JZ-gj-25G"/>
                         <outlet property="lblTitleMusic" destination="IWO-ap-q5F" id="vG8-Ip-Iaa"/>
                     </connections>
                 </viewController>
@@ -207,8 +228,11 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play_alt-512" width="256" height="256"/>
         <image name="presentateur" width="230.5" height="256"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
