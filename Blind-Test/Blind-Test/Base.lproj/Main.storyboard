@@ -32,17 +32,124 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find It !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-vw-lpM">
+                                <rect key="frame" x="10" y="108" width="394" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzW-Zt-PS5">
+                                <rect key="frame" x="10" y="394" width="394" height="100"/>
+                                <color key="backgroundColor" red="0.17488989547261824" green="0.12106636654935643" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="256-Bo-oR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Musique">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pp2-m8-v9l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-e9-mBD">
+                                <rect key="frame" x="10" y="514" width="394" height="100"/>
+                                <color key="backgroundColor" red="0.1748898955" green="0.12106636649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3rA-Yh-szn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Générique">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-zP-Bg9">
+                                <rect key="frame" x="10" y="634" width="394" height="100"/>
+                                <color key="backgroundColor" red="0.1748898955" green="0.12106636649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="J1G-ez-KH1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Publicités">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kbc-vw-lpM" secondAttribute="trailing" constant="10" id="1aw-9H-bKj"/>
+                            <constraint firstItem="lzW-Zt-PS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3Nx-L0-TsQ"/>
+                            <constraint firstItem="kbc-vw-lpM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="L6E-dg-FfI"/>
+                            <constraint firstItem="tYa-e9-mBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RfT-N3-C3I"/>
+                            <constraint firstItem="lzW-Zt-PS5" firstAttribute="top" secondItem="kbc-vw-lpM" secondAttribute="bottom" constant="250" id="S9C-kv-bTP"/>
+                            <constraint firstItem="8Gb-zP-Bg9" firstAttribute="top" secondItem="tYa-e9-mBD" secondAttribute="bottom" constant="20" id="URd-7F-bqz"/>
+                            <constraint firstItem="tYa-e9-mBD" firstAttribute="top" secondItem="lzW-Zt-PS5" secondAttribute="bottom" constant="20" id="ZuT-AE-Q0v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lzW-Zt-PS5" secondAttribute="trailing" constant="10" id="afE-MZ-xo0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Gb-zP-Bg9" secondAttribute="trailing" constant="10" id="ffT-jT-mQj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYa-e9-mBD" secondAttribute="trailing" constant="10" id="hJk-mb-mXx"/>
+                            <constraint firstItem="kbc-vw-lpM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vHT-lk-ozX"/>
+                            <constraint firstItem="8Gb-zP-Bg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zpP-Np-qGL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aZJ-yP-cRx"/>
+                    <connections>
+                        <outlet property="btnGenerique" destination="tYa-e9-mBD" id="4aZ-en-osx"/>
+                        <outlet property="btnMusic" destination="lzW-Zt-PS5" id="vSv-CL-dPF"/>
+                        <outlet property="btnPublicite" destination="8Gb-zP-Bg9" id="dUc-CP-g2T"/>
+                        <outlet property="titlelbl" destination="kbc-vw-lpM" id="Yor-k4-QCY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-941" y="153"/>
         </scene>
+        <!--Musique View Controller-->
+        <scene sceneID="sVP-56-7bE">
+            <objects>
+                <viewController storyboardIdentifier="MusiqueViewController" id="1xf-x1-bx9" customClass="MusiqueViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cVv-aw-AYb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musique" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWO-ap-q5F">
+                                <rect key="frame" x="10" y="64" width="394" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="presentateur" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-V5-QF3">
+                                <rect key="frame" x="10" y="200" width="394" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="dKm-Lr-gj0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fxR-7s-6Fw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="bottom" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="603" id="LlT-Es-pmt"/>
+                            <constraint firstItem="IWO-ap-q5F" firstAttribute="top" secondItem="fxR-7s-6Fw" secondAttribute="top" constant="20" id="PAM-oC-AH2"/>
+                            <constraint firstItem="Tm8-V5-QF3" firstAttribute="top" secondItem="IWO-ap-q5F" secondAttribute="bottom" constant="100" id="Tgu-UT-jSL"/>
+                            <constraint firstItem="IWO-ap-q5F" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="h8T-DB-MSZ"/>
+                            <constraint firstItem="Tm8-V5-QF3" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="jeB-CN-sLC"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="Tm8-V5-QF3" secondAttribute="trailing" constant="10" id="mHt-CO-yHP"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="IWO-ap-q5F" secondAttribute="trailing" constant="10" id="pAd-wo-8lu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="Tm8-V5-QF3" id="sxY-kO-3GJ"/>
+                        <outlet property="lblTitleMusic" destination="IWO-ap-q5F" id="vG8-Ip-Iaa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joQ-s2-FEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="160"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="presentateur" width="230.5" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
