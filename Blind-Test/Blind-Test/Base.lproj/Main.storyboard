@@ -99,15 +99,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Publicités">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-<<<<<<< HEAD
-=======
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-cW-RyK">
                                 <rect key="frame" x="382" y="154" width="22" height="22"/>
                                 <state key="normal" image="gear" catalog="system">
                                     <attributedString key="attributedTitle"/>
->>>>>>> a45300575eeee25a68cca113146ce5ad5639c4fb
                                 </state>
                                 <connections>
                                     <action selector="clicParamsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="WU9-rl-nPt"/>
@@ -169,16 +166,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="presentateur" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-V5-QF3">
                                 <rect key="frame" x="10" y="150" width="394" height="250"/>
-=======
-=======
->>>>>>> a45300575eeee25a68cca113146ce5ad5639c4fb
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="presentateur" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-V5-QF3">
                                 <rect key="frame" x="10" y="200" width="394" height="256"/>
->>>>>>> a45300575eeee25a68cca113146ce5ad5639c4fb
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="dKm-Lr-gj0"/>
                                 </constraints>
@@ -224,15 +216,9 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
-=======
         <image name="gear" catalog="system" width="64" height="58"/>
->>>>>>> a45300575eeee25a68cca113146ce5ad5639c4fb
-=======
         <image name="gear" catalog="system" width="64" height="58"/>
->>>>>>> a45300575eeee25a68cca113146ce5ad5639c4fb
         <image name="presentateur" width="230.5" height="256"/>
     </resources>
 </document>
