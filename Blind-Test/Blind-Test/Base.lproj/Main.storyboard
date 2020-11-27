@@ -120,22 +120,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="presentateur" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-V5-QF3">
-                                <rect key="frame" x="10" y="200" width="394" height="256"/>
+                                <rect key="frame" x="10" y="150" width="394" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="dKm-Lr-gj0"/>
+                                    <constraint firstAttribute="height" constant="250" id="dKm-Lr-gj0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Êtes-vous prêt ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3P-Yi-uVA">
+                                <rect key="frame" x="10" y="482" width="394" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="-2"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-Q5-dYE">
+                                <rect key="frame" x="10" y="564.5" width="394" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3fx-Vg-zRP"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fxR-7s-6Fw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="bottom" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="603" id="LlT-Es-pmt"/>
                             <constraint firstItem="IWO-ap-q5F" firstAttribute="top" secondItem="fxR-7s-6Fw" secondAttribute="top" constant="20" id="PAM-oC-AH2"/>
-                            <constraint firstItem="Tm8-V5-QF3" firstAttribute="top" secondItem="IWO-ap-q5F" secondAttribute="bottom" constant="100" id="Tgu-UT-jSL"/>
+                            <constraint firstItem="Tm8-V5-QF3" firstAttribute="top" secondItem="IWO-ap-q5F" secondAttribute="bottom" constant="50" id="Tgu-UT-jSL"/>
+                            <constraint firstItem="bAg-Q5-dYE" firstAttribute="top" secondItem="G3P-Yi-uVA" secondAttribute="bottom" constant="46" id="Vev-Wy-G20"/>
                             <constraint firstItem="IWO-ap-q5F" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="h8T-DB-MSZ"/>
+                            <constraint firstItem="G3P-Yi-uVA" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="iuC-FM-IBw"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="G3P-Yi-uVA" secondAttribute="trailing" constant="10" id="jSV-S0-FPy"/>
                             <constraint firstItem="Tm8-V5-QF3" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="jeB-CN-sLC"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="Tm8-V5-QF3" secondAttribute="trailing" constant="10" id="mHt-CO-yHP"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="IWO-ap-q5F" secondAttribute="trailing" constant="10" id="pAd-wo-8lu"/>
+                            <constraint firstItem="bAg-Q5-dYE" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="qnM-JE-EfT"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="bAg-Q5-dYE" secondAttribute="trailing" constant="10" id="qxN-S5-dTk"/>
+                            <constraint firstItem="G3P-Yi-uVA" firstAttribute="top" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="82" id="wBM-Ij-o1U"/>
                         </constraints>
                     </view>
                     <connections>
@@ -149,6 +166,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="presentateur" width="230.5" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
