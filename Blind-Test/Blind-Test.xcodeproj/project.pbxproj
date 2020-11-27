@@ -13,6 +13,7 @@
 		9AB4E3A02570DE5B00C05E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4E39E2570DE5B00C05E86 /* Main.storyboard */; };
 		9AB4E3A22570DE6100C05E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4E3A12570DE6100C05E86 /* Assets.xcassets */; };
 		9AB4E3A52570DE6100C05E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4E3A32570DE6100C05E86 /* LaunchScreen.storyboard */; };
+		9AB4E3AF2570F71700C05E86 /* ParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4E3AE2570F71700C05E86 /* ParamsViewController.swift */; };
 		AABAFB032570E9EA0053CFD1 /* MusiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABAFB022570E9EA0053CFD1 /* MusiqueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		9AB4E3A12570DE6100C05E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AB4E3A42570DE6100C05E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AB4E3A62570DE6100C05E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB4E3AE2570F71700C05E86 /* ParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsViewController.swift; sourceTree = "<group>"; };
 		AABAFB022570E9EA0053CFD1 /* MusiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiqueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				9AB4E3982570DE5B00C05E86 /* AppDelegate.swift */,
 				9AB4E39A2570DE5B00C05E86 /* SceneDelegate.swift */,
 				9AB4E39C2570DE5B00C05E86 /* ViewController.swift */,
+				9AB4E3AE2570F71700C05E86 /* ParamsViewController.swift */,
 				9AB4E39E2570DE5B00C05E86 /* Main.storyboard */,
 				9AB4E3A12570DE6100C05E86 /* Assets.xcassets */,
 				9AB4E3A32570DE6100C05E86 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				9AB4E39D2570DE5B00C05E86 /* ViewController.swift in Sources */,
 				9AB4E3992570DE5B00C05E86 /* AppDelegate.swift in Sources */,
+				9AB4E3AF2570F71700C05E86 /* ParamsViewController.swift in Sources */,
 				AABAFB032570E9EA0053CFD1 /* MusiqueViewController.swift in Sources */,
 				9AB4E39B2570DE5B00C05E86 /* SceneDelegate.swift in Sources */,
 			);
