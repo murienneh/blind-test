@@ -9,22 +9,21 @@
 import UIKit
 
 class ParamsViewController: UIViewController {
+    
+    @IBOutlet weak var monSlider: UISlider!
+    @IBOutlet weak var valeur: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let value = monSlider.value
+        valeur.text = String(value) + " secondes"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func setValue(){
+        let step : Float = 15
+        let sliderValue = monSlider.value
+        let roundedValue = round(sliderValue / step) * step
+        valeur.text = String(roundedValue) + " secondes"
     }
-    */
 
 }

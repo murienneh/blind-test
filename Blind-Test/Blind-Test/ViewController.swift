@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(musicViewController, animated: true)
     }
     
+    //Lors d'un clic sur le bouton engrenage, envoyer sur la page des paramètres
     @IBAction func clicParamsAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let paramsViewController = storyboard.instantiateViewController(withIdentifier: "ParamsViewController") as! ParamsViewController
