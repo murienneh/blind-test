@@ -52,7 +52,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valeur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-K3-N7m">
-                                <rect key="frame" x="345" y="271" width="49" height="21"/>
+                                <rect key="frame" x="346" y="271" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -215,9 +215,9 @@
                                     <action selector="clicPlay" destination="1xf-x1-bx9" eventType="touchUpInside" id="AnL-Kg-cXl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Fw-Mig">
-                                <rect key="frame" x="186" y="699" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Fw-Mig">
+                                <rect key="frame" x="10" y="699" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="67"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -226,7 +226,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sa7-Fw-Mig" firstAttribute="top" secondItem="InK-Gu-u0A" secondAttribute="bottom" constant="34" id="0is-iW-JOE"/>
-                            <constraint firstItem="sa7-Fw-Mig" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="186" id="AnI-V2-82U"/>
+                            <constraint firstItem="sa7-Fw-Mig" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="10" id="AnI-V2-82U"/>
                             <constraint firstItem="InK-Gu-u0A" firstAttribute="top" secondItem="G3P-Yi-uVA" secondAttribute="bottom" constant="47" id="HGd-B7-Hye"/>
                             <constraint firstItem="IWO-ap-q5F" firstAttribute="top" secondItem="fxR-7s-6Fw" secondAttribute="top" constant="20" id="PAM-oC-AH2"/>
                             <constraint firstItem="Tm8-V5-QF3" firstAttribute="top" secondItem="IWO-ap-q5F" secondAttribute="bottom" constant="50" id="Tgu-UT-jSL"/>
@@ -238,7 +238,7 @@
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="InK-Gu-u0A" secondAttribute="trailing" constant="157" id="nQ2-JR-9d6"/>
                             <constraint firstItem="InK-Gu-u0A" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="157" id="ozl-66-KQ1"/>
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="IWO-ap-q5F" secondAttribute="trailing" constant="10" id="pAd-wo-8lu"/>
-                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="sa7-Fw-Mig" secondAttribute="trailing" constant="186" id="vMw-zh-mae"/>
+                            <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="sa7-Fw-Mig" secondAttribute="trailing" constant="10" id="vMw-zh-mae"/>
                             <constraint firstItem="G3P-Yi-uVA" firstAttribute="top" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="82" id="wBM-Ij-o1U"/>
                         </constraints>
                     </view>
@@ -254,7 +254,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joQ-s2-FEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="160"/>
+            <point key="canvasLocation" x="-178" y="153"/>
+        </scene>
+        <!--Musique Question View Controller-->
+        <scene sceneID="JTP-B5-MqS">
+            <objects>
+                <viewController storyboardIdentifier="MusiqueQuestionViewController" id="ewM-jc-QfD" customClass="MusiqueQuestionViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i1q-jM-dKM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c9d-ts-aBi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="153"/>
         </scene>
     </scenes>
     <resources>

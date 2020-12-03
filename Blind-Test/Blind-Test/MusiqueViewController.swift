@@ -16,7 +16,8 @@ class MusiqueViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var btnPlayMusic: UIButton!;
     @IBOutlet weak var lblDecompte: UILabel!
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var timer = Timer()
+    var cpt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,25 @@ class MusiqueViewController: UIViewController {
     }
     
     @IBAction func clicPlay(){
-        for dcpt in 1...3 {
-            print(dcpt)
-            lblDecompte.text = String(dcpt)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.compteur), userInfo: nil, repeats: true)
+    }
+    
+    @objc func compteur(){
+        if(cpt <= 3){
+            if(cpt == 3){
+                lblDecompte.text = "Partez !"
+                timer.invalidate()
+                demarrerQuizz()
+            } else {
+                cpt = cpt + 1
+                lblDecompte.text = String(cpt)
+            }
         }
+    }
+    
+    func demarrerQuizz(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let musicQuestionViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueQuestionViewController") as! MusiqueQuestionViewController
+        self.navigationController?.pushViewController(musicQuestionViewController, animated: true)
     }
 }
