@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnGenerique: UIButton!
     @IBOutlet weak var btnPublicite: UIButton!
     @IBOutlet weak var btnParams: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

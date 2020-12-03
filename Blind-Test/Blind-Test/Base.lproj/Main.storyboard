@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1I-Lb-LLT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1I-Lb-LLT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,24 +55,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ev-qU-xWh">
+                                <rect key="frame" x="132" y="431" width="150" height="34"/>
+                                <color key="backgroundColor" red="0.17488989547261824" green="0.12106636654935643" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Enregistrer">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicReturnAction" destination="UkU-Gs-nsl" eventType="touchUpInside" id="bak-uq-qgh"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="JKR-BZ-kEw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="bYY-lL-4j8" secondAttribute="trailing" constant="145" id="Flt-UO-Vhx"/>
                             <constraint firstItem="bYY-lL-4j8" firstAttribute="top" secondItem="I2q-WA-MwC" secondAttribute="bottom" constant="20" id="IhV-SX-ydK"/>
                             <constraint firstItem="bYY-lL-4j8" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="NKk-Jh-Cm8"/>
                             <constraint firstItem="bRL-fp-HaM" firstAttribute="top" secondItem="JKR-BZ-kEw" secondAttribute="top" constant="20" id="Ol8-hH-M9G"/>
+                            <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="3Ev-qU-xWh" secondAttribute="trailing" constant="132" id="QxS-49-MJS"/>
                             <constraint firstItem="Exr-K3-N7m" firstAttribute="top" secondItem="bYY-lL-4j8" secondAttribute="bottom" constant="20" id="XrT-H6-f6J"/>
                             <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="I2q-WA-MwC" secondAttribute="trailing" constant="10" id="ZuS-6L-VNC"/>
                             <constraint firstItem="I2q-WA-MwC" firstAttribute="top" secondItem="bRL-fp-HaM" secondAttribute="bottom" constant="80" id="aEP-bp-aom"/>
+                            <constraint firstItem="3Ev-qU-xWh" firstAttribute="top" secondItem="bYY-lL-4j8" secondAttribute="bottom" constant="180" id="ehR-cN-fWu"/>
                             <constraint firstItem="bRL-fp-HaM" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="exp-dK-R7l"/>
                             <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="bRL-fp-HaM" secondAttribute="trailing" constant="10" id="o4C-YC-PSY"/>
                             <constraint firstItem="JKR-BZ-kEw" firstAttribute="trailing" secondItem="Exr-K3-N7m" secondAttribute="trailing" constant="20" id="o7Q-dG-jdp"/>
+                            <constraint firstItem="3Ev-qU-xWh" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="132" id="ogE-0I-KC7"/>
                             <constraint firstItem="I2q-WA-MwC" firstAttribute="leading" secondItem="JKR-BZ-kEw" secondAttribute="leading" constant="10" id="tj3-N2-4Oa"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="JKR-BZ-kEw"/>
                     </view>
                     <connections>
+                        <outlet property="btnRetour" destination="3Ev-qU-xWh" id="G5U-yw-x2d"/>
                         <outlet property="monSlider" destination="bYY-lL-4j8" id="O3D-YG-1Lj"/>
                         <outlet property="valeur" destination="Exr-K3-N7m" id="dxK-AG-P8r"/>
                     </connections>
@@ -86,7 +99,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,40 +110,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzW-Zt-PS5">
-                                <rect key="frame" x="10" y="394" width="394" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzW-Zt-PS5">
+                                <rect key="frame" x="10" y="344" width="394" height="100"/>
                                 <color key="backgroundColor" red="0.17488989547261824" green="0.12106636654935643" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="256-Bo-oR1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Musique">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pp2-m8-v9l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-e9-mBD">
-                                <rect key="frame" x="10" y="514" width="394" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-e9-mBD">
+                                <rect key="frame" x="10" y="464" width="394" height="100"/>
                                 <color key="backgroundColor" red="0.1748898955" green="0.12106636649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="3rA-Yh-szn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Générique">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-zP-Bg9">
-                                <rect key="frame" x="10" y="634" width="394" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-zP-Bg9">
+                                <rect key="frame" x="10" y="584" width="394" height="100"/>
                                 <color key="backgroundColor" red="0.1748898955" green="0.12106636649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="J1G-ez-KH1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Publicités">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-cW-RyK">
@@ -144,14 +157,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kbc-vw-lpM" secondAttribute="trailing" constant="10" id="1aw-9H-bKj"/>
                             <constraint firstItem="lzW-Zt-PS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3Nx-L0-TsQ"/>
                             <constraint firstItem="kbc-vw-lpM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="L6E-dg-FfI"/>
                             <constraint firstItem="tYa-e9-mBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RfT-N3-C3I"/>
-                            <constraint firstItem="lzW-Zt-PS5" firstAttribute="top" secondItem="kbc-vw-lpM" secondAttribute="bottom" constant="250" id="S9C-kv-bTP"/>
+                            <constraint firstItem="lzW-Zt-PS5" firstAttribute="top" secondItem="kbc-vw-lpM" secondAttribute="bottom" constant="200" id="S9C-kv-bTP"/>
                             <constraint firstItem="8Gb-zP-Bg9" firstAttribute="top" secondItem="tYa-e9-mBD" secondAttribute="bottom" constant="20" id="URd-7F-bqz"/>
                             <constraint firstItem="dnJ-cW-RyK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="VER-2E-R6B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-cW-RyK" secondAttribute="trailing" constant="10" id="WJE-zt-R2T"/>
@@ -162,6 +174,7 @@
                             <constraint firstItem="kbc-vw-lpM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vHT-lk-ozX"/>
                             <constraint firstItem="8Gb-zP-Bg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zpP-Np-qGL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aZJ-yP-cRx"/>
                     <connections>
@@ -209,7 +222,7 @@
                                     <constraint firstAttribute="height" constant="100" id="cBs-Ks-mdc"/>
                                 </constraints>
                                 <state key="normal" image="play_alt-512">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="clicPlay" destination="1xf-x1-bx9" eventType="touchUpInside" id="AnL-Kg-cXl"/>
@@ -222,8 +235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="fxR-7s-6Fw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sa7-Fw-Mig" firstAttribute="top" secondItem="InK-Gu-u0A" secondAttribute="bottom" constant="34" id="0is-iW-JOE"/>
                             <constraint firstItem="sa7-Fw-Mig" firstAttribute="leading" secondItem="fxR-7s-6Fw" secondAttribute="leading" constant="186" id="AnI-V2-82U"/>
@@ -241,6 +253,7 @@
                             <constraint firstItem="fxR-7s-6Fw" firstAttribute="trailing" secondItem="sa7-Fw-Mig" secondAttribute="trailing" constant="186" id="vMw-zh-mae"/>
                             <constraint firstItem="G3P-Yi-uVA" firstAttribute="top" secondItem="Tm8-V5-QF3" secondAttribute="bottom" constant="82" id="wBM-Ij-o1U"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="fxR-7s-6Fw"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -258,14 +271,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="play_alt-512" width="256" height="256"/>
         <image name="presentateur" width="230.5" height="256"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
