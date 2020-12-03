@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         btnPublicite.layer.cornerRadius = 10.0
     }
     
-    //Lors d'un clic sur le bouton "Musique" va sur la page musique
+    //Lors d'un clic sur le bouton "Musique" va sur la page musique (MusiqueViewController)
     @IBAction func clicMusiqueAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueViewController") as! MusiqueViewController
