@@ -285,19 +285,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-cj-F9L">
-                                <rect key="frame" x="20" y="277" width="374" height="4"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nvJ-VH-fbW">
+                                <rect key="frame" x="132" y="110.5" width="150" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="tAJ-PK-eYW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82n-EW-fCr">
+                                <rect key="frame" x="190" y="441" width="37" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="didTapButton" destination="ewM-jc-QfD" eventType="touchUpInside" id="jQl-pS-hHT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c9d-ts-aBi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="c9d-ts-aBi" firstAttribute="trailing" secondItem="1vs-rA-B2y" secondAttribute="trailing" constant="10" id="5P5-YK-fVu"/>
+                            <constraint firstItem="c9d-ts-aBi" firstAttribute="trailing" secondItem="nvJ-VH-fbW" secondAttribute="trailing" constant="132" id="766-X7-IMn"/>
                             <constraint firstItem="1vs-rA-B2y" firstAttribute="leading" secondItem="c9d-ts-aBi" secondAttribute="leading" constant="10" id="Hs8-am-fqj"/>
+                            <constraint firstItem="nvJ-VH-fbW" firstAttribute="top" secondItem="1vs-rA-B2y" secondAttribute="bottom" constant="20" id="b11-Me-zMX"/>
+                            <constraint firstItem="nvJ-VH-fbW" firstAttribute="leading" secondItem="c9d-ts-aBi" secondAttribute="leading" constant="132" id="fZY-DK-Anh"/>
                             <constraint firstItem="1vs-rA-B2y" firstAttribute="top" secondItem="c9d-ts-aBi" secondAttribute="top" constant="10" id="vd5-mo-bK9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="82n-EW-fCr" id="5xb-4Z-sE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +323,7 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="play_alt-512" width="256" height="256"/>
         <image name="presentateur" width="230.5" height="256"/>
         <systemColor name="labelColor">
