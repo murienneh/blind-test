@@ -14,21 +14,35 @@ class MusiqueQuestionViewController: UIViewController {
     @IBOutlet weak var btnPlay: UIButton!
     
     var player: AVAudioPlayer?
-
+    
+    struct Question {
+        let optionTitre : [String]
+        let optionChanteur : [String]
+        let correcteTitre : String
+        let correcteChanteur : String
+        let musique : String
+        let uneReponse : Bool
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let q1 = Question(optionTitre: ["Oui", "ok", "A Sky Full Of Stars", "Salut"], optionChanteur: ["Joe", "Coldplay", "oui oui", "pompom"], correcteTitre: "A Sky Full Of Stars", correcteChanteur: "Coldplay", musique: "Coldplay - A Sky Full Of Stars", uneReponse: false)
+        let q2 = Question(optionTitre: ["Non", "Airplanes", "jesaispas", "hey"], optionChanteur: ["Lala", "aaaaaa", "non non", "B.o.B ft. Hayley Williams"], correcteTitre: "Airplanes", correcteChanteur: "B.o.B ft. Hayley Williams", musique: "B.o.B ft. Hayley Williams - Airplanes", uneReponse: false)
+        
     }
     
     @IBAction func didTapButton(){
+        let musiques = ["Coldplay - A Sky Full Of Stars", "B.o.B ft. Hayley Williams - Airplanes", "Cats on Trees, Calogero - Jimmy", "Claudio Capeo -  Un homme debout", "Patrick Sébastien - Les sardines", "Taylor Swift - Shake It Off"]
+        let cpt = 0
         if let player = player, player.isPlaying{
             btnPlay.setTitle("Play", for: .normal)
             player.stop()
         }
         else{
             btnPlay.setTitle("Stop", for: .normal)
-            let urlString = Bundle.main.path(forResource: "Coldplay - A Sky Full Of Stars", ofType: "mp3")
+            let musique = musiques[cpt]
+            let urlString = Bundle.main.path(forResource: musique, ofType: "mp3")
             do {
                 try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
 				try AVAudioSession.sharedInstance().setActive(true, with: .notifyOthersOnDeactivation)
@@ -49,6 +63,10 @@ class MusiqueQuestionViewController: UIViewController {
                 print("Problems")
             }
         }
+        
+    }
+    
+    func initTitres(newQuestion : Question){
         
     }
 

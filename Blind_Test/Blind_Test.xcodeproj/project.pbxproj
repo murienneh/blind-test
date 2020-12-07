@@ -14,6 +14,11 @@
 		8390CC2C257E32B7003AD511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390CC2A257E32B7003AD511 /* LaunchScreen.storyboard */; };
 		8390CC37257E32B7003AD511 /* Blind_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC36257E32B7003AD511 /* Blind_TestTests.swift */; };
 		8390CC42257E32B7003AD511 /* Blind_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */; };
+		83F82A87257E6A67000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A83257E6A66000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 */; };
+		83F82A88257E6A67000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A84257E6A66000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 */; };
+		83F82A89257E6A67000F7972 /* Claudio Capeo -  Un homme debout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */; };
+		83F82A8A257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A86257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 */; };
+		83F82A8C257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A8B257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 */; };
 		E39FA520257E46B900A3AAD2 /* MusiqueQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */; };
 		E39FA526257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E39FA525257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 */; };
 		E39FA52B257E46D700A3AAD2 /* MusiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */; };
@@ -51,6 +56,11 @@
 		8390CC3D257E32B7003AD511 /* Blind_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blind_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_TestUITests.swift; sourceTree = "<group>"; };
 		8390CC43257E32B7003AD511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F82A83257E6A66000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cats on Trees, Calogero - Jimmy.mp3"; sourceTree = "<group>"; };
+		83F82A84257E6A66000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "B.o.B ft. Hayley Williams - Airplanes.mp3"; sourceTree = "<group>"; };
+		83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Claudio Capeo -  Un homme debout.mp3"; sourceTree = "<group>"; };
+		83F82A86257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Taylor Swift - Shake It Off.mp3"; sourceTree = "<group>"; };
+		83F82A8B257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Patrick Sébastien - Les sardines.mp3"; sourceTree = "<group>"; };
 		E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiqueQuestionViewController.swift; sourceTree = "<group>"; };
 		E39FA525257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Coldplay - A Sky Full Of Stars.mp3"; sourceTree = "<group>"; };
 		E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiqueViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +150,11 @@
 		E39FA524257E46C600A3AAD2 /* Musiques */ = {
 			isa = PBXGroup;
 			children = (
+				83F82A84257E6A66000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 */,
+				83F82A83257E6A66000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 */,
+				83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */,
+				83F82A8B257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 */,
+				83F82A86257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 */,
 				E39FA525257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 */,
 			);
 			path = Musiques;
@@ -252,9 +267,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F82A89257E6A67000F7972 /* Claudio Capeo -  Un homme debout.mp3 in Resources */,
+				83F82A88257E6A67000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 in Resources */,
 				8390CC2C257E32B7003AD511 /* LaunchScreen.storyboard in Resources */,
 				8390CC29257E32B7003AD511 /* Assets.xcassets in Resources */,
 				E39FA526257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 in Resources */,
+				83F82A87257E6A67000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 in Resources */,
+				83F82A8A257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 in Resources */,
+				83F82A8C257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 in Resources */,
 				8390CC27257E32B7003AD511 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
