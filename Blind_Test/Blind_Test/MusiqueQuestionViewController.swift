@@ -30,8 +30,8 @@ class MusiqueQuestionViewController: UIViewController {
             btnPlay.setTitle("Stop", for: .normal)
             let urlString = Bundle.main.path(forResource: "Coldplay - A Sky Full Of Stars", ofType: "mp3")
             do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
+				try AVAudioSession.sharedInstance().setActive(true, with: .notifyOthersOnDeactivation)
                 
                 guard let urlString = urlString else {
                     return
