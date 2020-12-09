@@ -440,7 +440,8 @@
                         <outlet property="btnTitre1" destination="acM-bK-0GU" id="BPa-ez-8IW"/>
                         <outlet property="btnTitre2" destination="0zw-C4-TjK" id="KBA-2S-m0v"/>
                         <outlet property="btnTitre3" destination="ImP-xj-Srp" id="qvo-ey-HRY"/>
-                        <outlet property="btnTitre4" destination="V7X-zt-fUF" id="m9h-nI-Djk"/>
+                        <outlet property="btnTitre4" destination="V7X-zt-fUF" id="Md7-pu-GoH"/>
+                        <outlet property="titleQuestion" destination="1vs-rA-B2y" id="e0i-1I-4G2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

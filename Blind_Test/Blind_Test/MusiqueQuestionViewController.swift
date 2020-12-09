@@ -11,6 +11,7 @@ import UIKit
 
 class MusiqueQuestionViewController: UIViewController {
     
+    @IBOutlet weak var titleQuestion: UILabel!
     @IBOutlet weak var btnTitre1: UIButton!
     @IBOutlet weak var btnTitre2: UIButton!
     @IBOutlet weak var btnTitre3: UIButton!
@@ -44,13 +45,17 @@ class MusiqueQuestionViewController: UIViewController {
         
         let lesQuestions: [Question] = [q1, q2]
         
+        titleQuestion.text = "Question " + String(cpt+1) + "/" + String(lesQuestions.count)
+        
         if(cpt < lesQuestions.count){
             initTitres(lesQuestions[cpt])
             initChanteur(lesQuestions[cpt])
         }
         
-        let musique = musiques[cpt]
-        let urlString = Bundle.main.path(forResource: musique, ofType: "mp3")
+        //let musique = musiques[cpt]
+        let laQuestion = lesQuestions[cpt]
+        
+        let urlString = Bundle.main.path(forResource: laQuestion.musique, ofType: "mp3")
         do {
             try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
             try AVAudioSession.sharedInstance().setActive(true, with: .notifyOthersOnDeactivation)
