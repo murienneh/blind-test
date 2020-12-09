@@ -355,6 +355,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="05R-HG-93o"/>
+                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="Dld-FZ-xkb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-io-RZ2">
@@ -366,6 +367,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="POb-Jz-w5q"/>
+                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="Ub4-Xb-HLG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-WT-kgD">
@@ -380,6 +382,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QW-Tx-vyV"/>
+                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="tMJ-ee-jDi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-Na-W5Q">
@@ -391,6 +394,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYc-qE-8ql"/>
+                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="2ze-tO-TQD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i7-rg-ptD">

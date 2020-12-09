@@ -79,11 +79,6 @@ class MusiqueQuestionViewController: UIViewController {
         
     }
     
-    @IBAction func didTapButton(){
-        
-        
-    }
-    
     func initTitres(_ newQuestion : Question){
         btnTitre1.setTitle(newQuestion.optionTitre[0], for: .normal)
         btnTitre2.setTitle(newQuestion.optionTitre[1], for: .normal)
