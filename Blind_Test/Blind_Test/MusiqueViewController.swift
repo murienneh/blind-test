@@ -17,7 +17,7 @@ class MusiqueViewController: UIViewController {
     @IBOutlet weak var btnPlayMusic: UIButton!;
     @IBOutlet weak var lblDecompte: UILabel!
     var timer = Timer()
-    var cpt = 0
+    var cpt = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +30,16 @@ class MusiqueViewController: UIViewController {
     }
     
     @objc func compteur(){
-        if(cpt <= 3){
-            if(cpt == 3){
-                lblDecompte.text = "Partez !"
-                timer.invalidate()
-                demarrerQuizz()
-            } else {
-                cpt = cpt + 1
-                lblDecompte.text = String(cpt)
-            }
+        
+        if(cpt == 1){
+            lblDecompte.text = "Partez !"
+            timer.invalidate()
+            demarrerQuizz()
+        } else {
+            cpt = cpt - 1
+            lblDecompte.text = String(cpt)
         }
+        
     }
     
     func demarrerQuizz(){

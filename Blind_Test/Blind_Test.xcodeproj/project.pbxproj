@@ -14,6 +14,7 @@
 		8390CC2C257E32B7003AD511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390CC2A257E32B7003AD511 /* LaunchScreen.storyboard */; };
 		8390CC37257E32B7003AD511 /* Blind_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC36257E32B7003AD511 /* Blind_TestTests.swift */; };
 		8390CC42257E32B7003AD511 /* Blind_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */; };
+		83AE92EB2580D1880024E14B /* ResultatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AE92EA2580D1880024E14B /* ResultatViewController.swift */; };
 		83F82A87257E6A67000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A83257E6A66000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 */; };
 		83F82A88257E6A67000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A84257E6A66000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 */; };
 		83F82A89257E6A67000F7972 /* Claudio Capeo -  Un homme debout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */; };
@@ -56,6 +57,7 @@
 		8390CC3D257E32B7003AD511 /* Blind_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blind_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_TestUITests.swift; sourceTree = "<group>"; };
 		8390CC43257E32B7003AD511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83AE92EA2580D1880024E14B /* ResultatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultatViewController.swift; sourceTree = "<group>"; };
 		83F82A83257E6A66000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cats on Trees, Calogero - Jimmy.mp3"; sourceTree = "<group>"; };
 		83F82A84257E6A66000F7972 /* B.o.B ft. Hayley Williams - Airplanes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "B.o.B ft. Hayley Williams - Airplanes.mp3"; sourceTree = "<group>"; };
 		83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Claudio Capeo -  Un homme debout.mp3"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */,
 				E39FA52F257E46DD00A3AAD2 /* ParamsViewController.swift */,
 				E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */,
+				83AE92EA2580D1880024E14B /* ResultatViewController.swift */,
 				E39FA524257E46C600A3AAD2 /* Musiques */,
 			);
 			path = Blind_Test;
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83AE92EB2580D1880024E14B /* ResultatViewController.swift in Sources */,
 				8390CC24257E32B7003AD511 /* ViewController.swift in Sources */,
 				8390CC22257E32B7003AD511 /* AppDelegate.swift in Sources */,
 				E39FA530257E46DD00A3AAD2 /* ParamsViewController.swift in Sources */,
