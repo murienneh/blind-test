@@ -16,12 +16,16 @@ class MusiqueViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var btnPlayMusic: UIButton!;
     @IBOutlet weak var lblDecompte: UILabel!
+    var tempsRep: Float!
     var timer = Timer()
     var cpt = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if (tempsRep == nil){
+            tempsRep = 45.0
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -45,6 +49,7 @@ class MusiqueViewController: UIViewController {
     func demarrerQuizz(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicQuestionViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueQuestionViewController") as! MusiqueQuestionViewController
+        musicQuestionViewController.tempsRep = tempsRep
         self.navigationController?.pushViewController(musicQuestionViewController, animated: true)
     }
 }

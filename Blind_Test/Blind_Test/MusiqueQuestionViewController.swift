@@ -22,7 +22,13 @@ class MusiqueQuestionViewController: UIViewController {
     @IBOutlet weak var btnChanteur4: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     
+    var hasToPop = false
+    var tempsRep: Float!
     var score = 0
+    var timer = Timer()
+    var cptTimer = 0
+    //Création d'une forme
+    let shapeLayer = CAShapeLayer()
     
     var player: AVAudioPlayer?
     
@@ -47,13 +53,14 @@ class MusiqueQuestionViewController: UIViewController {
     
     let q6 = Question(optionTitre: ["Blank Space", "So What", "Shake It Off", "The Middle"], optionChanteur: ["Zedd, Maren Morris, Grey", "Taylor Swift", "Pink", "Zara Larsson"], correcteTitre: "Shake It Off", correcteChanteur: "Taylor Swift", musique: "Taylor Swift - Shake It Off", uneReponse: false)
     
-    
     var cpt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initTimer()
+        initBarTimer()
         
-        let lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
+        var lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
         
         if(cpt < lesQuestions.count){
             initTitres(lesQuestions[cpt])
@@ -65,9 +72,72 @@ class MusiqueQuestionViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let resultatViewController = storyboard.instantiateViewController(withIdentifier: "ResultatViewController") as! ResultatViewController
             resultatViewController.score = score
-            self.navigationController?.pushViewController(resultatViewController, animated: true)
+            resultatViewController.modalPresentationStyle = .fullScreen
+            self.present(resultatViewController, animated: true) {
+                self.hasToPop = true
+            }
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if hasToPop {
+            self.navigationController?.popToRootViewController(animated: false)
+        }
+    }
+    
+    func initTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.compteur), userInfo: nil, repeats: true)
+    }
+    
+    @objc func compteur(){
+        
+        //PB => enchaine les questions
+        if(cptTimer == Int(tempsRep)){
+            timer.invalidate()
+            cpt = cpt + 1
+            viewDidLoad()
+        } else {
+            cptTimer = cptTimer + 1
+        }
+        
+    }
+    
+    func initBarTimer(){
+        //Création du cercle qui va être utilisé pour le timer
+        //Placé au centre de l'écran
+        let center = view.center
+        let circularPath = UIBezierPath(arcCenter: center, radius: 70, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi - CGFloat.pi/2, clockwise: true)
+        
+        //Définition des caractéristiques du cercle
+        //Donne la position du cercle
+        shapeLayer.frame = CGRect(x: 0, y: -190, width: 0, height: 0)
+        //Afectation de la forme cercle
+        shapeLayer.path = circularPath.cgPath
+        //Epaisseur du contour du cercle
+        shapeLayer.lineWidth = 5
+        //Couleur du contour
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        //Donne la fin du contour
+        shapeLayer.strokeEnd = 0
+        //Enlève le fond noir du cercle
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineCap = kCALineCapRound
+        
+        //Ajoute le cercle à la vue
+        view.layer.addSublayer(shapeLayer)
+        //Permet de faire l'animation du contour du cercle
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        //Fait le tour du cercle
+        basicAnimation.toValue = 1
+        //Durée de l'animation
+        basicAnimation.duration = Double(tempsRep)
+        basicAnimation.fillMode = kCAFillModeForwards
+        //Lorsque l'annimation est finie permet de mettre le contour à l'état initial
+        basicAnimation.isRemovedOnCompletion = true
+        shapeLayer.add(basicAnimation, forKey: "basicAnim")
     }
     
     func initQuestion(){

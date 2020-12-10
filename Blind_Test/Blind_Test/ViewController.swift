@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnPublicite: UIButton!
     @IBOutlet weak var btnParams: UIButton!
     
+    var tempsRep: Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,7 @@ class ViewController: UIViewController {
     @IBAction func clicMusiqueAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueViewController") as! MusiqueViewController
+        musicViewController.tempsRep = tempsRep
         self.navigationController?.pushViewController(musicViewController, animated: true)
     }
     
