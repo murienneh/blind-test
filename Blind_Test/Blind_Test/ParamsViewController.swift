@@ -10,10 +10,10 @@ import UIKit
 
 class ParamsViewController: UIViewController {
     
+    //Déclaration des variables
     @IBOutlet weak var monSlider: UISlider!
     @IBOutlet weak var valeur: UILabel!
     @IBOutlet weak var btnRetour: UIButton!
-
     var hasToPop = false
     var tempsRep: Float = 45
     
@@ -24,6 +24,7 @@ class ParamsViewController: UIViewController {
         valeur.text = String(value) + " secondes"
     }
     
+    //Change la valeur du temps de réponse suivant la valeur du slider
     @IBAction func setValue(){
         let step : Float = 15
         let sliderValue = monSlider.value
@@ -31,6 +32,7 @@ class ParamsViewController: UIViewController {
         valeur.text = String(tempsRep) + " secondes"
     }
     
+    //Retourne sur la page principale avec le temps de réponse choisis
     @IBAction func clicReturnAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController

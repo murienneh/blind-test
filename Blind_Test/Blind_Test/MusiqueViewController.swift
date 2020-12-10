@@ -23,18 +23,19 @@ class MusiqueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Si l'utilisateur ne choisi pas la valeur du temps de réponse alors il est par défaut de 45 secondes
         if (tempsRep == nil){
             tempsRep = 45.0
         }
-        // Do any additional setup after loading the view.
+    
     }
     
+    //Au clic, le compteur de lancement démarre
     @IBAction func clicPlay(){
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.compteur), userInfo: nil, repeats: true)
     }
     
     @objc func compteur(){
-        
         if(cpt == 1){
             lblDecompte.text = "Partez !"
             timer.invalidate()
@@ -46,6 +47,7 @@ class MusiqueViewController: UIViewController {
         
     }
     
+    //fonction permettant de lancer le quizz
     func demarrerQuizz(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicQuestionViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueQuestionViewController") as! MusiqueQuestionViewController
