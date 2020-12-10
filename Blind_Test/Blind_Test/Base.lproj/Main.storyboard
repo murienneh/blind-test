@@ -274,7 +274,6 @@
         <!--Musique Question View Controller-->
         <scene sceneID="JTP-B5-MqS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MusiqueQuestionViewController" id="ewM-jc-QfD" customClass="MusiqueQuestionViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1q-jM-dKM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -459,6 +458,7 @@
                         <outlet property="titleQuestion" destination="1vs-rA-B2y" id="PN2-VS-wsD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="527.536231884058" y="152.44565217391306"/>
         </scene>
@@ -469,8 +469,28 @@
                     <view key="view" contentMode="scaleToFill" id="nEH-xa-m2Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-Ga-rN5">
+                                <rect key="frame" x="364" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CRm-3N-lgv"/>
+                                    <constraint firstAttribute="width" constant="40" id="uXA-hH-ZtZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction" destination="hGG-Gj-Qb7" eventType="touchUpInside" id="iI0-tC-CX1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="F9o-aF-aRB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rqb-Ga-rN5" firstAttribute="top" secondItem="F9o-aF-aRB" secondAttribute="top" constant="10" id="VtK-cV-RTd"/>
+                            <constraint firstItem="F9o-aF-aRB" firstAttribute="trailing" secondItem="rqb-Ga-rN5" secondAttribute="trailing" constant="10" id="kbe-xP-zpc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVF-Cj-2wT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
