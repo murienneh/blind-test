@@ -11,7 +11,7 @@ import UIKit
 
 class MusiqueQuestionViewController: UIViewController {
     
-    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var titleQuestion: UILabel!
     @IBOutlet weak var btnTitre1: UIButton!
     @IBOutlet weak var btnTitre2: UIButton!
     @IBOutlet weak var btnTitre3: UIButton!
@@ -23,6 +23,8 @@ class MusiqueQuestionViewController: UIViewController {
     @IBOutlet weak var btnNext: UIButton!
     
     var player: AVAudioPlayer?
+    
+    var score = 0
     
     struct Question {
         let optionTitre : [String]
@@ -41,41 +43,43 @@ class MusiqueQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let musiques = ["Coldplay - A Sky Full Of Stars", "B.o.B ft. Hayley Williams - Airplanes", "Cats on Trees, Calogero - Jimmy", "Claudio Capeo -  Un homme debout", "Patrick Sébastien - Les sardines", "Taylor Swift - Shake It Off"]
-        
         let lesQuestions: [Question] = [q1, q2]
+        
+        titleQuestion.text = "Question " + String(cpt+1) + "/" + String(lesQuestions.count)
         
         if(cpt < lesQuestions.count){
             initTitres(lesQuestions[cpt])
             initChanteur(lesQuestions[cpt])
+        }   else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let resultatViewController = storyboard.instantiateViewController(withIdentifier: "ResultatViewController") as! ResultatViewController
+            resultatViewController.score = score
+            self.navigationController?.present(resultatViewController, animated: true, completion: nil)
         }
         
-        if let player = player, player.isPlaying{
-            player.stop()
-        }
-        else{
-            let musique = musiques[cpt]
-            let urlString = Bundle.main.path(forResource: musique, ofType: "mp3")
-            do {
-                try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
-                try AVAudioSession.sharedInstance().setActive(true, with: .notifyOthersOnDeactivation)
-                
-                guard let urlString = urlString else {
-                    return
-                }
-                
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                
-                guard let player = player else {
-                    return
-                }
-                
-                player.play()
-                
-            }catch{
-                print("Problems")
+        let laQuestion = lesQuestions[cpt]
+        
+        let urlString = Bundle.main.path(forResource: laQuestion.musique, ofType: "mp3")
+        do {
+            try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
+            try AVAudioSession.sharedInstance().setActive(true, with: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
             }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                
+            guard let player = player else {
+                return
+            }
+                
+            player.play()
+                
+        }catch{
+            print("Problems")
         }
+        
         
     }
     
@@ -84,6 +88,16 @@ class MusiqueQuestionViewController: UIViewController {
         btnTitre2.setTitle(newQuestion.optionTitre[1], for: .normal)
         btnTitre3.setTitle(newQuestion.optionTitre[2], for: .normal)
         btnTitre4.setTitle(newQuestion.optionTitre[3], for: .normal)
+        
+        btnTitre1.backgroundColor = UIColor.blue
+        btnTitre2.backgroundColor = UIColor.blue
+        btnTitre3.backgroundColor = UIColor.blue
+        btnTitre4.backgroundColor = UIColor.blue
+        
+        btnTitre1.isUserInteractionEnabled = true
+        btnTitre2.isUserInteractionEnabled = true
+        btnTitre3.isUserInteractionEnabled = true
+        btnTitre4.isUserInteractionEnabled = true
     }
     
     func initChanteur(_ newQuestion: Question){
@@ -91,10 +105,55 @@ class MusiqueQuestionViewController: UIViewController {
         btnChanteur2.setTitle(newQuestion.optionChanteur[1], for: .normal)
         btnChanteur3.setTitle(newQuestion.optionChanteur[2], for: .normal)
         btnChanteur4.setTitle(newQuestion.optionChanteur[3], for: .normal)
+        
+        btnChanteur1.backgroundColor = UIColor.blue
+        btnChanteur2.backgroundColor = UIColor.blue
+        btnChanteur3.backgroundColor = UIColor.blue
+        btnChanteur4.backgroundColor = UIColor.blue
+        
+        btnChanteur1.isUserInteractionEnabled = true
+        btnChanteur2.isUserInteractionEnabled = true
+        btnChanteur3.isUserInteractionEnabled = true
+        btnChanteur4.isUserInteractionEnabled = true
     }
     
     @IBAction func clicNext(){
         cpt = cpt + 1
         viewDidLoad()
     }
+    
+    @IBAction func selectReponseTitre(_ sender: UIButton){
+        let lesQuestions: [Question] = [q1, q2]
+        let laQuestion = lesQuestions[cpt]
+        if(laQuestion.correcteTitre == sender.titleLabel?.text){
+            sender.backgroundColor = UIColor.green
+            score += 1
+        }
+        else {
+            sender.backgroundColor = UIColor.red
+        }
+        btnTitre1.isUserInteractionEnabled = false
+        btnTitre2.isUserInteractionEnabled = false
+        btnTitre3.isUserInteractionEnabled = false
+        btnTitre4.isUserInteractionEnabled = false
+        
+    }
+    
+    @IBAction func selectReponseChanteur(_ sender: UIButton){
+        let lesQuestions: [Question] = [q1, q2]
+        let laQuestion = lesQuestions[cpt]
+        if(laQuestion.correcteChanteur == sender.titleLabel?.text){
+            sender.backgroundColor = UIColor.green
+            score += 1
+        }
+        else {
+            sender.backgroundColor = UIColor.red
+        }
+        btnChanteur1.isUserInteractionEnabled = false
+        btnChanteur2.isUserInteractionEnabled = false
+        btnChanteur3.isUserInteractionEnabled = false
+        btnChanteur4.isUserInteractionEnabled = false
+        
+    }
 }
+

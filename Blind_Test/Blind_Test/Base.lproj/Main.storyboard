@@ -274,6 +274,7 @@
         <!--Musique Question View Controller-->
         <scene sceneID="JTP-B5-MqS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MusiqueQuestionViewController" id="ewM-jc-QfD" customClass="MusiqueQuestionViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1q-jM-dKM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -291,14 +292,6 @@
                                     <constraint firstAttribute="height" constant="150" id="tAJ-PK-eYW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82n-EW-fCr">
-                                <rect key="frame" x="357" y="113" width="37" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="didTapButton" destination="ewM-jc-QfD" eventType="touchUpInside" id="jQl-pS-hHT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-TF-90b">
                                 <rect key="frame" x="20" y="530" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.1748898955" green="0.12106636649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -308,6 +301,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="9S1-7l-ptO"/>
+                                    <action selector="selectReponseChanteur:" destination="ewM-jc-QfD" eventType="touchUpInside" id="lKW-u3-ggr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsy-j7-Dob">
@@ -319,6 +313,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpM-Pr-Rm2"/>
+                                    <action selector="selectReponseChanteur:" destination="ewM-jc-QfD" eventType="touchUpInside" id="jmS-rF-PI6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaG-dm-mOS">
@@ -330,6 +325,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ek-3a-hww"/>
+                                    <action selector="selectReponseChanteur:" destination="ewM-jc-QfD" eventType="touchUpInside" id="QMU-eB-FxR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZv-Se-W9t">
@@ -341,6 +337,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGj-Zo-IyI"/>
+                                    <action selector="selectReponseChanteur:" destination="ewM-jc-QfD" eventType="touchUpInside" id="AhO-S5-KKi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-rX-BYX">
@@ -355,7 +352,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="05R-HG-93o"/>
-                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="Dld-FZ-xkb"/>
+                                    <action selector="selectReponseTitre:" destination="ewM-jc-QfD" eventType="touchUpInside" id="5nl-Qz-JSY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-io-RZ2">
@@ -367,7 +364,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="POb-Jz-w5q"/>
-                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="Ub4-Xb-HLG"/>
+                                    <action selector="selectReponseTitre:" destination="ewM-jc-QfD" eventType="touchUpInside" id="jFR-c9-LfZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-WT-kgD">
@@ -382,7 +379,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QW-Tx-vyV"/>
-                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="tMJ-ee-jDi"/>
+                                    <action selector="selectReponseTitre:" destination="ewM-jc-QfD" eventType="touchUpInside" id="U6i-72-cq5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-Na-W5Q">
@@ -394,7 +391,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clicMusiqueAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYc-qE-8ql"/>
-                                    <action selector="selectReponseTitre" destination="ewM-jc-QfD" eventType="touchUpInside" id="2ze-tO-TQD"/>
+                                    <action selector="selectReponseTitre:" destination="ewM-jc-QfD" eventType="touchUpInside" id="N3q-Ia-qTJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i7-rg-ptD">
@@ -425,7 +422,6 @@
                             <constraint firstItem="4i7-rg-ptD" firstAttribute="leading" secondItem="c9d-ts-aBi" secondAttribute="leading" constant="226" id="DaV-ha-1FY"/>
                             <constraint firstItem="c9d-ts-aBi" firstAttribute="trailing" secondItem="z5f-WT-kgD" secondAttribute="trailing" constant="20" id="GNa-u5-tyM"/>
                             <constraint firstItem="1vs-rA-B2y" firstAttribute="leading" secondItem="c9d-ts-aBi" secondAttribute="leading" constant="10" id="Hs8-am-fqj"/>
-                            <constraint firstItem="z5f-WT-kgD" firstAttribute="top" secondItem="82n-EW-fCr" secondAttribute="bottom" constant="117" id="KAq-Qt-fKm"/>
                             <constraint firstItem="c9d-ts-aBi" firstAttribute="trailing" secondItem="4i7-rg-ptD" secondAttribute="trailing" constant="20" id="LvY-VL-V3T"/>
                             <constraint firstItem="jq7-TF-90b" firstAttribute="leading" secondItem="c9d-ts-aBi" secondAttribute="leading" constant="20" id="ODi-BO-J21"/>
                             <constraint firstItem="VZv-Se-W9t" firstAttribute="top" secondItem="jq7-TF-90b" secondAttribute="bottom" constant="10" id="Qzh-AV-PrN"/>
@@ -456,16 +452,45 @@
                         <outlet property="btnChanteur3" destination="VZv-Se-W9t" id="hIO-gZ-8AI"/>
                         <outlet property="btnChanteur4" destination="dsy-j7-Dob" id="fnL-3b-CSK"/>
                         <outlet property="btnNext" destination="4i7-rg-ptD" id="LMu-hc-1Y8"/>
-                        <outlet property="btnPlay" destination="82n-EW-fCr" id="5xb-4Z-sE0"/>
                         <outlet property="btnTitre1" destination="z5f-WT-kgD" id="Abx-T6-iGq"/>
                         <outlet property="btnTitre2" destination="Bwh-rX-BYX" id="dUw-Jl-cFX"/>
                         <outlet property="btnTitre3" destination="UY4-Na-W5Q" id="ktp-bD-cE8"/>
                         <outlet property="btnTitre4" destination="JQD-io-RZ2" id="cuZ-4M-3la"/>
+                        <outlet property="titleQuestion" destination="1vs-rA-B2y" id="PN2-VS-wsD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3M5-dS-1pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="527.536231884058" y="152.44565217391306"/>
+        </scene>
+        <!--Resultat View Controller-->
+        <scene sceneID="Air-1J-Esd">
+            <objects>
+                <viewController storyboardIdentifier="ResultatViewController" id="hGG-Gj-Qb7" customClass="ResultatViewController" customModule="Blind_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEH-xa-m2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F9o-aF-aRB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVF-Cj-2wT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="132"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CHv-Xm-qgA">
+            <objects>
+                <viewController id="AhV-CM-Egs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ic-0i-Bys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q0C-sD-1WP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPF-PS-qbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="-536"/>
         </scene>
     </scenes>
     <resources>
@@ -475,6 +500,9 @@
         <image name="presentateur" width="230.5" height="256"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

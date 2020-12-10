@@ -19,6 +19,7 @@
 		83F82A89257E6A67000F7972 /* Claudio Capeo -  Un homme debout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */; };
 		83F82A8A257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A86257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 */; };
 		83F82A8C257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F82A8B257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 */; };
+		AABC90F52580D8FF00437C5F /* ResultatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC90F42580D8FF00437C5F /* ResultatViewController.swift */; };
 		E39FA520257E46B900A3AAD2 /* MusiqueQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */; };
 		E39FA526257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E39FA525257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 */; };
 		E39FA52B257E46D700A3AAD2 /* MusiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */; };
@@ -61,6 +62,7 @@
 		83F82A85257E6A66000F7972 /* Claudio Capeo -  Un homme debout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Claudio Capeo -  Un homme debout.mp3"; sourceTree = "<group>"; };
 		83F82A86257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Taylor Swift - Shake It Off.mp3"; sourceTree = "<group>"; };
 		83F82A8B257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Patrick Sébastien - Les sardines.mp3"; sourceTree = "<group>"; };
+		AABC90F42580D8FF00437C5F /* ResultatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultatViewController.swift; sourceTree = "<group>"; };
 		E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiqueQuestionViewController.swift; sourceTree = "<group>"; };
 		E39FA525257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Coldplay - A Sky Full Of Stars.mp3"; sourceTree = "<group>"; };
 		E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiqueViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				E39FA52F257E46DD00A3AAD2 /* ParamsViewController.swift */,
 				E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */,
 				E39FA524257E46C600A3AAD2 /* Musiques */,
+				AABC90F42580D8FF00437C5F /* ResultatViewController.swift */,
 			);
 			path = Blind_Test;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABC90F52580D8FF00437C5F /* ResultatViewController.swift in Sources */,
 				8390CC24257E32B7003AD511 /* ViewController.swift in Sources */,
 				8390CC22257E32B7003AD511 /* AppDelegate.swift in Sources */,
 				E39FA530257E46DD00A3AAD2 /* ParamsViewController.swift in Sources */,
