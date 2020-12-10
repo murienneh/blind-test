@@ -19,7 +19,10 @@ class ParamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Mise en forme du bouton
         btnRetour.layer.cornerRadius = 10.0
+        
         let value = monSlider.value
         valeur.text = String(value) + " secondes"
     }

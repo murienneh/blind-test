@@ -13,10 +13,15 @@ class ResultatViewController: UIViewController {
     //Déclaration des variables
     @IBOutlet weak var leScore: UILabel!
     @IBOutlet weak var btnHome: UIButton!
+    
+    //Récupération du score de MusiqueQuestionViewController
     var score: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Arrondi des angles des boutons
+        btnHome.layer.cornerRadius = 10.0
         
         //Affiche le score du joueur
         leScore.text = "Votre score : " + String(score) + "/12"

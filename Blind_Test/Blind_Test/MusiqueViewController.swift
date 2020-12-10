@@ -17,7 +17,11 @@ class MusiqueViewController: UIViewController {
     @IBOutlet weak var btnPlayMusic: UIButton!;
     @IBOutlet weak var lblDecompte: UILabel!
     var tempsRep: Float!
+    
+    //Création d'un timer
     var timer = Timer()
+    
+    //Compteur pour le timer
     var cpt = 4
     
     override func viewDidLoad() {
@@ -47,7 +51,7 @@ class MusiqueViewController: UIViewController {
         
     }
     
-    //fonction permettant de lancer le quizz
+    //Une fois le décompte terminé on lance la partie, envoi sur la page MusiqueQuestionViewController
     func demarrerQuizz(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicQuestionViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueQuestionViewController") as! MusiqueQuestionViewController

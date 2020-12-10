@@ -24,16 +24,28 @@ class MusiqueQuestionViewController: UIViewController {
     @IBOutlet weak var btnNext: UIButton!
     var hasToPop = false
     var tempsRep: Float!
+    
+    //Score du joueur
     var score = 0
+    
     var timer = Timer()
+    
+    //Instanciation des compteurs pour le Timer et le nombre de question
     var cptTimer = 0
     var cptQuestion = 0
+    
     //Création d'une forme
     let shapeLayer = CAShapeLayer()
     
+    //Composant qui permet de jouer les morceaux de musique
     var player: AVAudioPlayer?
     
-    struct Question {
+    //Création de la classe "Question"
+    struct Question: Equatable {
+        static func ==(lhs: MusiqueQuestionViewController.Question, rhs: MusiqueQuestionViewController.Question) -> Bool {
+            return lhs.musique == rhs.musique
+        }
+        
         let optionTitre : [String]
         let optionChanteur : [String]
         let correcteTitre : String
@@ -55,18 +67,48 @@ class MusiqueQuestionViewController: UIViewController {
     
     let q6 = Question(optionTitre: ["Blank Space", "So What", "Shake It Off", "The Middle"], optionChanteur: ["Zedd, Maren Morris, Grey", "Taylor Swift", "Pink", "Zara Larsson"], correcteTitre: "Shake It Off", correcteChanteur: "Taylor Swift", musique: "Taylor Swift - Shake It Off", uneReponse: false)
     
+    //Création du tableau contenant les questions dans l'ordre aléatoire
+    var lesQuestionsRandom: [Question] = []
+    
+    //Variable permettant de vérifier que nous somme au début du quizz pour ne pas instancier le tableau de l'ordre aléatoire à chaque question
+    var initRandomQuestion: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Arrondi des angles des boutons
+        boutonArrondis()
+        
+        //Lance le Timer ainsi que la bare de progression
         initTimer()
         initBarTimer()
         
+        //Met le Timer à 0 pour la prochaine question
+        cptTimer = 0
+        
+        //Tableau contenant les questions
         var lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
         
-        //Si le nombre de questions jouées n'est pas supérieure au nombre de questions disponibles, le jeu passe à la questions suivantes
+        //Verifie si on est à la premiere question
+        if(initRandomQuestion){
+            let nbQ = lesQuestions.count
+        
+            for i in 0...nbQ-1{
+                var laQuestion = lesQuestions[Int(arc4random_uniform(UInt32(lesQuestions.count)))]
+                while lesQuestionsRandom.contains(laQuestion) {
+                    laQuestion = lesQuestions[Int(arc4random_uniform(UInt32(lesQuestions.count)))]
+                }
+            
+                lesQuestionsRandom.append(laQuestion)
+            }
+        }
+        
+        //si le compteur est in férieur au nombre de question présent dans le tableau
+        //afficher les options pour les titres et les chanteurs des questions
+        //Sinon à la fin des questions on arrête de jouer la musique et on passe dans la page des résultats
         if(cptQuestion < lesQuestions.count){
-            initTitres(lesQuestions[cptQuestion])
-            initChanteur(lesQuestions[cptQuestion])
+            initTitres(lesQuestionsRandom[cptQuestion])
+            initChanteur(lesQuestionsRandom[cptQuestion])
             initQuestion()
         }
         //Si toutes les questions ont été jouées, le joueur est redirigé vers la page de score et la musique s'arrete
@@ -81,6 +123,21 @@ class MusiqueQuestionViewController: UIViewController {
             }
         }
         
+        initRandomQuestion = false
+        
+    }
+    
+    //Arrondi des angles des boutons
+    func boutonArrondis(){
+        btnTitre1.layer.cornerRadius = 10.0
+        btnTitre2.layer.cornerRadius = 10.0
+        btnTitre3.layer.cornerRadius = 10.0
+        btnTitre4.layer.cornerRadius = 10.0
+        btnChanteur1.layer.cornerRadius = 10.0
+        btnChanteur2.layer.cornerRadius = 10.0
+        btnChanteur3.layer.cornerRadius = 10.0
+        btnChanteur4.layer.cornerRadius = 10.0
+        btnNext.layer.cornerRadius = 10.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +157,6 @@ class MusiqueQuestionViewController: UIViewController {
         if(cptTimer == Int(tempsRep)){
             timer.invalidate()
             cptQuestion = cptQuestion + 1
-            cptTimer = 0
             viewDidLoad()
         } else {
             cptTimer = cptTimer + 1
@@ -143,13 +199,15 @@ class MusiqueQuestionViewController: UIViewController {
         shapeLayer.add(basicAnimation, forKey: "basicAnim")
     }
     
+    //Cette fonction permet de jouer la musique
     func initQuestion(){
-        let lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
         
-        titleQuestion.text = "Question " + String(cptQuestion+1) + "/" + String(lesQuestions.count)
+        //Donne le numéro de la question
+        titleQuestion.text = "Question " + String(cptQuestion+1) + "/" + String(lesQuestionsRandom.count)
         
-        let laQuestion = lesQuestions[cptQuestion]
+        let laQuestion = lesQuestionsRandom[cptQuestion]
         
+        //Joue la musique de la question
         let urlString = Bundle.main.path(forResource: laQuestion.musique, ofType: "mp3")
         do {
             try AVAudioSession.sharedInstance().setMode("AVAudioSessionModeDefault")
@@ -172,7 +230,7 @@ class MusiqueQuestionViewController: UIViewController {
         }
     }
     
-    //Affiche les propositions des titres et mets leur background en bleu
+    //Affiche les propositions des titres et mets leur couleur en bleu
     func initTitres(_ newQuestion : Question){
         btnTitre1.setTitle(newQuestion.optionTitre[0], for: .normal)
         btnTitre2.setTitle(newQuestion.optionTitre[1], for: .normal)
@@ -184,13 +242,14 @@ class MusiqueQuestionViewController: UIViewController {
         btnTitre3.backgroundColor = UIColor.blue
         btnTitre4.backgroundColor = UIColor.blue
         
+        //L'utilisateur peux cliquer sur les boutons
         btnTitre1.isUserInteractionEnabled = true
         btnTitre2.isUserInteractionEnabled = true
         btnTitre3.isUserInteractionEnabled = true
         btnTitre4.isUserInteractionEnabled = true
     }
     
-    //Affiche les propositions des chanteurs et mets leur background en bleu
+    //Affiche les propositions des chanteurs et mets leur couleur en bleu
     func initChanteur(_ newQuestion: Question){
         btnChanteur1.setTitle(newQuestion.optionChanteur[0], for: .normal)
         btnChanteur2.setTitle(newQuestion.optionChanteur[1], for: .normal)
@@ -202,13 +261,14 @@ class MusiqueQuestionViewController: UIViewController {
         btnChanteur3.backgroundColor = UIColor.blue
         btnChanteur4.backgroundColor = UIColor.blue
         
+        //L'utilisateur peux cliquer sur les boutons
         btnChanteur1.isUserInteractionEnabled = true
         btnChanteur2.isUserInteractionEnabled = true
         btnChanteur3.isUserInteractionEnabled = true
         btnChanteur4.isUserInteractionEnabled = true
     }
     
-    //Passer à la question suivante
+    //Passe à la question suivante lorsqu'on click sur le bouton "Next"
     @IBAction func clicNext(){
         cptQuestion = cptQuestion + 1
         viewDidLoad()
@@ -216,8 +276,7 @@ class MusiqueQuestionViewController: UIViewController {
     
     //Verifie si la réponse choisie parmis les titres est correcte ou non
     @IBAction func selectReponseTitre( sender: UIButton){
-        let lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
-        let laQuestion = lesQuestions[cptQuestion]
+        let laQuestion = lesQuestionsRandom[cptQuestion]
         //Si la réponse est correcte, le bouton devient vert et le score du joueur s'incrémente de 1
         if(laQuestion.correcteTitre == sender.titleLabel?.text){
             sender.backgroundColor = UIColor.green
@@ -227,6 +286,7 @@ class MusiqueQuestionViewController: UIViewController {
         else {
             sender.backgroundColor = UIColor.red
         }
+        //Désactive les boutons lorsqu'une réponse est choisie
         btnTitre1.isUserInteractionEnabled = false
         btnTitre2.isUserInteractionEnabled = false
         btnTitre3.isUserInteractionEnabled = false
@@ -236,8 +296,7 @@ class MusiqueQuestionViewController: UIViewController {
     
     //Verifie si la réponse choisie parmis les chanteurs est correcte ou non
     @IBAction func selectReponseChanteur( sender: UIButton){
-        let lesQuestions: [Question] = [q1, q2, q3, q4, q5, q6]
-        let laQuestion = lesQuestions[cptQuestion]
+        let laQuestion = lesQuestionsRandom[cptQuestion]
         //Si la réponse est correcte, le bouton devient vert et le score du joueur s'incrémente de 1
         if(laQuestion.correcteChanteur == sender.titleLabel?.text){
             sender.backgroundColor = UIColor.green
@@ -247,6 +306,7 @@ class MusiqueQuestionViewController: UIViewController {
         else {
             sender.backgroundColor = UIColor.red
         }
+        //Désactive les boutons lorsqu'une réponse est choisie
         btnChanteur1.isUserInteractionEnabled = false
         btnChanteur2.isUserInteractionEnabled = false
         btnChanteur3.isUserInteractionEnabled = false
