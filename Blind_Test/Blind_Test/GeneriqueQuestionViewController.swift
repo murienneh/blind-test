@@ -70,6 +70,8 @@ class GeneriqueQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        delaisAfficheCorrectRep.invalidate()
+        
         //Arrondi des angles des boutons
         boutonArrondis()
         
@@ -145,13 +147,30 @@ class GeneriqueQuestionViewController: UIViewController {
     @objc func compteur(){
         //Si le joueur ne repond pas dans le temps impartis, le jeu passe à la question suivante et le joueur ne marque aucun point
         if(cptTimer == Int(tempsRep)){
+            let question  = lesQuestionsRandom[cptQuestion]
+            correcteReponse(question.correcteTitre)
+            initTimerDelais()
             timer.invalidate()
             cptQuestion = cptQuestion + 1
-            viewDidLoad()
         } else {
             cptTimer = cptTimer + 1
         }
-        
+    }
+    
+    var delaisAfficheCorrectRep = Timer()
+    
+    //Attend 3 secondes avant de passer à la question pour avoir le temps d'afficher la bonne réponse en cas de non réponse du joueur
+    func initTimerDelais(){
+        delaisAfficheCorrectRep = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.delais), userInfo: nil, repeats: true)
+    }
+    
+    var cptDelais = 0
+    @objc func delais(){
+        if(cptDelais == 3){
+            viewDidLoad()
+        } else {
+            cptDelais = cptDelais + 1
+        }
     }
     
     func initBarTimer(){
@@ -258,6 +277,7 @@ class GeneriqueQuestionViewController: UIViewController {
             //Si la réponse est fausse, le bouton devient rouge et le joueur ne marque aucun point
         else {
             sender.backgroundColor = UIColor.red
+            correcteReponse(laQuestion.correcteTitre)
         }
         //Désactive les boutons lorsqu'une réponse est choisie
         btnTitre1.isUserInteractionEnabled = false
@@ -265,6 +285,26 @@ class GeneriqueQuestionViewController: UIViewController {
         btnTitre3.isUserInteractionEnabled = false
         btnTitre4.isUserInteractionEnabled = false
         
+    }
+    
+    //Mets le bouton correct en vert
+    func correcteReponse(_ laReponse: String){
+        switch laReponse {
+        case (btnTitre1.titleLabel?.text!)!:
+            btnTitre1.backgroundColor = UIColor.green
+        case (btnTitre2.titleLabel?.text!)!:
+            btnTitre2.backgroundColor = UIColor.green
+        case (btnTitre3.titleLabel?.text!)!:
+            btnTitre3.backgroundColor = UIColor.green
+        case (btnTitre4.titleLabel?.text!)!:
+            btnTitre4.backgroundColor = UIColor.green
+        default:
+            print("Pb")
+        }
+        btnTitre1.isUserInteractionEnabled = false
+        btnTitre2.isUserInteractionEnabled = false
+        btnTitre3.isUserInteractionEnabled = false
+        btnTitre4.isUserInteractionEnabled = false
     }
     
 }
