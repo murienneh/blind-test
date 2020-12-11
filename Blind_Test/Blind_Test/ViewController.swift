@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         btnPublicite.layer.cornerRadius = 10.0
     }
     
-    //Lors d'un clic sur le bouton "Musique" va sur la page musique (MusiqueViewController)
+    //Lors d'un clic sur le bouton "Musiques" va sur la page musique (MusiqueViewController)
     @IBAction func clicMusiqueAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let musicViewController = storyboard.instantiateViewController(withIdentifier: "MusiqueViewController") as! MusiqueViewController
@@ -36,12 +36,20 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(musicViewController, animated: true)
     }
     
-    //Lors d'un clic sur le bouton "Génerique" va sur la page generique (GeneriqueViewController)
+    //Lors d'un clic sur le bouton "Géneriques" va sur la page generique (GeneriqueViewController)
     @IBAction func clicGeneriqueAction(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let generiqueViewController = storyboard.instantiateViewController(withIdentifier: "GeneriqueViewController") as! GeneriqueViewController
         generiqueViewController.tempsRep = tempsRep
         self.navigationController?.pushViewController(generiqueViewController, animated: true)
+    }
+    
+    //Lors d'un clic sur le bouton "Publicités" va sur la page publicite (PubliciteViewController)
+    @IBAction func clicPubliciteAction(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let publiciteViewController = storyboard.instantiateViewController(withIdentifier: "PubliciteViewController") as! PubliciteViewController
+        publiciteViewController.tempsRep = tempsRep
+        self.navigationController?.pushViewController(publiciteViewController, animated: true)
     }
     
     //Lors d'un clic sur le bouton engrenage, envoyer sur la page des paramètres

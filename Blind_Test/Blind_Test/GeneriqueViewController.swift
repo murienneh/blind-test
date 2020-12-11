@@ -51,7 +51,7 @@ class GeneriqueViewController: UIViewController {
         
     }
     
-    //Une fois le décompte terminé on lance la partie, envoi sur la page MusiqueQuestionViewController
+    //Une fois le décompte terminé on lance la partie, envoi sur la page GeneriqueQuestionViewController
     func demarrerQuizz(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let generiqueQuestionViewController = storyboard.instantiateViewController(withIdentifier: "GeneriqueQuestionViewController") as! GeneriqueQuestionViewController

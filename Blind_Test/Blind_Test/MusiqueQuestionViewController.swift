@@ -117,6 +117,7 @@ class MusiqueQuestionViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let resultatViewController = storyboard.instantiateViewController(withIdentifier: "ResultatViewController") as! ResultatViewController
             resultatViewController.score = score
+            resultatViewController.nbQuestion = lesQuestions.count * 2
             resultatViewController.modalPresentationStyle = .fullScreen
             self.present(resultatViewController, animated: true) {
                 self.hasToPop = true
@@ -270,6 +271,7 @@ class MusiqueQuestionViewController: UIViewController {
     
     //Passe à la question suivante lorsqu'on click sur le bouton "Next"
     @IBAction func clicNext(){
+        timer.invalidate()
         cptQuestion = cptQuestion + 1
         viewDidLoad()
     }

@@ -14,6 +14,15 @@
 		8390CC2C257E32B7003AD511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390CC2A257E32B7003AD511 /* LaunchScreen.storyboard */; };
 		8390CC37257E32B7003AD511 /* Blind_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC36257E32B7003AD511 /* Blind_TestTests.swift */; };
 		8390CC42257E32B7003AD511 /* Blind_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */; };
+		83A400DB2583E2030052CAE1 /* blind_test_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A400DA2583E2020052CAE1 /* blind_test_icon.png */; };
+		83A400DD2583E4550052CAE1 /* PubliciteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A400DC2583E4550052CAE1 /* PubliciteViewController.swift */; };
+		83A400DF2583E5AD0052CAE1 /* PubliciteQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A400DE2583E5AD0052CAE1 /* PubliciteQuestionsViewController.swift */; };
+		83A400E72583EBD90052CAE1 /* BNP Paribas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E12583EBD60052CAE1 /* BNP Paribas.mp3 */; };
+		83A400E82583EBD90052CAE1 /* Lu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E22583EBD70052CAE1 /* Lu.mp3 */; };
+		83A400E92583EBD90052CAE1 /* Nikon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E32583EBD70052CAE1 /* Nikon.mp3 */; };
+		83A400EA2583EBD90052CAE1 /* La Banque Postale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E42583EBD80052CAE1 /* La Banque Postale.mp3 */; };
+		83A400EB2583EBD90052CAE1 /* Evian.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E52583EBD90052CAE1 /* Evian.mp3 */; };
+		83A400EC2583EBD90052CAE1 /* Ikea-Njut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83A400E62583EBD90052CAE1 /* Ikea-Njut.mp3 */; };
 		83AE92EB2580D1880024E14B /* ResultatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AE92EA2580D1880024E14B /* ResultatViewController.swift */; };
 		83DF9B932583947800FF4CEA /* GeneriqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF9B922583947800FF4CEA /* GeneriqueViewController.swift */; };
 		83DF9B9A258394A600FF4CEA /* Pokemon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83DF9B94258394A300FF4CEA /* Pokemon.mp3 */; };
@@ -65,6 +74,15 @@
 		8390CC3D257E32B7003AD511 /* Blind_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blind_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8390CC41257E32B7003AD511 /* Blind_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_TestUITests.swift; sourceTree = "<group>"; };
 		8390CC43257E32B7003AD511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A400DA2583E2020052CAE1 /* blind_test_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blind_test_icon.png; sourceTree = "<group>"; };
+		83A400DC2583E4550052CAE1 /* PubliciteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubliciteViewController.swift; sourceTree = "<group>"; };
+		83A400DE2583E5AD0052CAE1 /* PubliciteQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubliciteQuestionsViewController.swift; sourceTree = "<group>"; };
+		83A400E12583EBD60052CAE1 /* BNP Paribas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BNP Paribas.mp3"; sourceTree = "<group>"; };
+		83A400E22583EBD70052CAE1 /* Lu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lu.mp3; sourceTree = "<group>"; };
+		83A400E32583EBD70052CAE1 /* Nikon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nikon.mp3; sourceTree = "<group>"; };
+		83A400E42583EBD80052CAE1 /* La Banque Postale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "La Banque Postale.mp3"; sourceTree = "<group>"; };
+		83A400E52583EBD90052CAE1 /* Evian.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Evian.mp3; sourceTree = "<group>"; };
+		83A400E62583EBD90052CAE1 /* Ikea-Njut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ikea-Njut.mp3"; sourceTree = "<group>"; };
 		83AE92EA2580D1880024E14B /* ResultatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultatViewController.swift; sourceTree = "<group>"; };
 		83DF9B922583947800FF4CEA /* GeneriqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneriqueViewController.swift; sourceTree = "<group>"; };
 		83DF9B94258394A300FF4CEA /* Pokemon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pokemon.mp3; sourceTree = "<group>"; };
@@ -138,13 +156,17 @@
 				8390CC28257E32B7003AD511 /* Assets.xcassets */,
 				8390CC2A257E32B7003AD511 /* LaunchScreen.storyboard */,
 				8390CC2D257E32B7003AD511 /* Info.plist */,
+				83A400DA2583E2020052CAE1 /* blind_test_icon.png */,
 				8390CC23257E32B7003AD511 /* ViewController.swift */,
 				E39FA52A257E46D700A3AAD2 /* MusiqueViewController.swift */,
 				83DF9B922583947800FF4CEA /* GeneriqueViewController.swift */,
+				83A400DC2583E4550052CAE1 /* PubliciteViewController.swift */,
 				E39FA52F257E46DD00A3AAD2 /* ParamsViewController.swift */,
 				E39FA51F257E46B900A3AAD2 /* MusiqueQuestionViewController.swift */,
 				83DF9BA02583981300FF4CEA /* GeneriqueQuestionViewController.swift */,
+				83A400DE2583E5AD0052CAE1 /* PubliciteQuestionsViewController.swift */,
 				83AE92EA2580D1880024E14B /* ResultatViewController.swift */,
+				83A400E02583EBAD0052CAE1 /* Publicites */,
 				83DF9B912583942500FF4CEA /* Generiques */,
 				E39FA524257E46C600A3AAD2 /* Musiques */,
 			);
@@ -167,6 +189,19 @@
 				8390CC43257E32B7003AD511 /* Info.plist */,
 			);
 			path = Blind_TestUITests;
+			sourceTree = "<group>";
+		};
+		83A400E02583EBAD0052CAE1 /* Publicites */ = {
+			isa = PBXGroup;
+			children = (
+				83A400E12583EBD60052CAE1 /* BNP Paribas.mp3 */,
+				83A400E52583EBD90052CAE1 /* Evian.mp3 */,
+				83A400E62583EBD90052CAE1 /* Ikea-Njut.mp3 */,
+				83A400E42583EBD80052CAE1 /* La Banque Postale.mp3 */,
+				83A400E22583EBD70052CAE1 /* Lu.mp3 */,
+				83A400E32583EBD70052CAE1 /* Nikon.mp3 */,
+			);
+			path = Publicites;
 			sourceTree = "<group>";
 		};
 		83DF9B912583942500FF4CEA /* Generiques */ = {
@@ -308,8 +343,13 @@
 				83DF9B9B258394A600FF4CEA /* Harry Potter.mp3 in Resources */,
 				8390CC2C257E32B7003AD511 /* LaunchScreen.storyboard in Resources */,
 				8390CC29257E32B7003AD511 /* Assets.xcassets in Resources */,
+				83A400E72583EBD90052CAE1 /* BNP Paribas.mp3 in Resources */,
+				83A400DB2583E2030052CAE1 /* blind_test_icon.png in Resources */,
+				83A400EA2583EBD90052CAE1 /* La Banque Postale.mp3 in Resources */,
+				83A400E92583EBD90052CAE1 /* Nikon.mp3 in Resources */,
 				E39FA526257E46C600A3AAD2 /* Coldplay - A Sky Full Of Stars.mp3 in Resources */,
 				83F82A87257E6A67000F7972 /* Cats on Trees, Calogero - Jimmy.mp3 in Resources */,
+				83A400EB2583EBD90052CAE1 /* Evian.mp3 in Resources */,
 				83F82A8A257E6A67000F7972 /* Taylor Swift - Shake It Off.mp3 in Resources */,
 				83F82A8C257E6A71000F7972 /* Patrick Sébastien - Les sardines.mp3 in Resources */,
 				83DF9B9C258394A600FF4CEA /* Mission Impossible.mp3 in Resources */,
@@ -317,6 +357,8 @@
 				83DF9B9A258394A600FF4CEA /* Pokemon.mp3 in Resources */,
 				83DF9B9E258394A600FF4CEA /* Star Wars.mp3 in Resources */,
 				8390CC27257E32B7003AD511 /* Main.storyboard in Resources */,
+				83A400E82583EBD90052CAE1 /* Lu.mp3 in Resources */,
+				83A400EC2583EBD90052CAE1 /* Ikea-Njut.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A400DD2583E4550052CAE1 /* PubliciteViewController.swift in Sources */,
 				83DF9B932583947800FF4CEA /* GeneriqueViewController.swift in Sources */,
 				83AE92EB2580D1880024E14B /* ResultatViewController.swift in Sources */,
 				8390CC24257E32B7003AD511 /* ViewController.swift in Sources */,
+				83A400DF2583E5AD0052CAE1 /* PubliciteQuestionsViewController.swift in Sources */,
 				8390CC22257E32B7003AD511 /* AppDelegate.swift in Sources */,
 				83DF9BA12583981300FF4CEA /* GeneriqueQuestionViewController.swift in Sources */,
 				E39FA530257E46DD00A3AAD2 /* ParamsViewController.swift in Sources */,

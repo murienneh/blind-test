@@ -14,8 +14,9 @@ class ResultatViewController: UIViewController {
     @IBOutlet weak var leScore: UILabel!
     @IBOutlet weak var btnHome: UIButton!
     
-    //Récupération du score de MusiqueQuestionViewController
+    //Récupération du score du joueur et du nombre de question
     var score: Int!
+    var nbQuestion: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class ResultatViewController: UIViewController {
         btnHome.layer.cornerRadius = 10.0
         
         //Affiche le score du joueur
-        leScore.text = "Votre score : " + String(score) + "/12"
+        leScore.text = "Votre score : " + String(score) + "/" + String(nbQuestion)
     }
 
     override func didReceiveMemoryWarning() {
