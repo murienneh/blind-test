@@ -109,6 +109,7 @@ class GeneriqueQuestionViewController: UIViewController {
             //Si toutes les questions ont été jouées, le joueur est redirigé vers la page de score et la musique s'arrete
         else{
             player?.stop()
+            timer.invalidate()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let resultatViewController = storyboard.instantiateViewController(withIdentifier: "ResultatViewController") as! ResultatViewController
             resultatViewController.score = score
